@@ -4,6 +4,7 @@ Given(/^we are at home page$/, function() {
   var timeUnits = require("minium/timeunits");
   $(":root").waitTime(5, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
+  $(":root").waitTime(1, timeUnits.SECONDS);
 });
 
 Given(/^we validate all the sections of home by scrolling$/, function() {
@@ -33,9 +34,9 @@ Given(/^we select the menu options$/, function() {
   $(":root").waitTime(2, timeUnits.SECONDS);
   $("#navbarResponsive > ul > li:nth-child(1)").click();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
-  $(":root").waitTime(1, timeUnits.SECONDS);
+  $(":root").waitTime(2, timeUnits.SECONDS);
   $("#UM-10").click();
-  $(":root").waitTime(1, timeUnits.SECONDS);
+  $(":root").waitTime(2, timeUnits.SECONDS);
   $("#UM-10").click();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
@@ -50,6 +51,7 @@ Given(/^we select "([^"]*)" option on Acelerador Unifin menu$/, function(arg1) {
 });
 Then(/^we see the login page$/, function() {
   browser.getCurrentUrl();
+  $(":root").waitTime(2, timeUnits.SECONDS);
   scenario.embed(browser.screenshot().asBytes(), "image/png");
   //$(expect("body > div > header > div > div")).to.exist();
 });
