@@ -40,6 +40,7 @@ Given(/^we fill the fields of the form Contactanos$/, function() {
 });
 
 Then(/^close the form$/, function() {
+  $(":root").waitTime(1, timeUnits.SECONDS);
   $("body > div.wrapper > div.side-contacto.p-md-5 > div > div").scrollIntoView();
   $("body > div.wrapper > div.side-contacto.p-md-5 > div > div > span").click();
 });
