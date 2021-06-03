@@ -9,7 +9,7 @@ Given(/^we select the combo box "([^"]*)" option$/, function(arg1) {
   $("#header > div > div > div").scrollIntoView();
   $(":root").waitTime(1, timeUnits.SECONDS);
   $("#UH-3").click();
-  //scenario.embed(browser.screenshot().asBytes(), "image/png");
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
 });
 
@@ -36,7 +36,7 @@ Given(/^we fill the fields of the form Contactanos$/, function() {
   $("#ingreso > option:nth-child(3)").click();
   $(":root").waitTime(1, timeUnits.SECONDS);
   $("#exampleCheck1").click();
-  //scenario.embed(browser.screenshot().asBytes(), "image/png");
+  scenario.embed(browser.screenshot().asBytes(), "image/png");
   $(":root").waitTime(1, timeUnits.SECONDS);
 });
 
