@@ -22,5 +22,5 @@ Given(/^we select the office on combobox$/, function() {
 Then(/^we select the botton "([^"]*)"$/, function(arg1) {
   $("#UH-18").click();
   browser.getCurrentUrl();
-  scenario.embed(browser.screenshot().asBytes(), "image/png");
+  //scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
