@@ -16,11 +16,12 @@ Given(/^we select the office on combobox$/, function() {
   $("#UH-66").click();
   $("#UH-67").click();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
-   $(":root").waitTime(3, timeUnits.SECONDS);
+  $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
 Then(/^we select the botton "([^"]*)"$/, function(arg1) {
   $("#UH-18").click();
+  $(":root").waitTime(2, timeUnits.SECONDS);
   browser.getCurrentUrl();
   //scenario.embed(browser.screenshot().asBytes(), "image/png");
 });
