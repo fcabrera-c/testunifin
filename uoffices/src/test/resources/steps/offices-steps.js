@@ -1,6 +1,6 @@
 Given(/^we go to the home page$/, function() {
   browser.get("https://www.unifin.com.mx/");
-  browser.configure().window().maximize();
+  //browser.configure().window().maximize();
   var timeUnits = require("minium/timeunits");
   $(":root").waitTime(5, timeUnits.SECONDS);
 });
@@ -16,6 +16,7 @@ Given(/^we select the office on combobox$/, function() {
   $("#UH-66").click();
   $("#UH-67").click();
   scenario.embed(browser.screenshot().asBytes(), "image/png");
+   $(":root").waitTime(3, timeUnits.SECONDS);
 });
 
 Then(/^we select the botton "([^"]*)"$/, function(arg1) {
